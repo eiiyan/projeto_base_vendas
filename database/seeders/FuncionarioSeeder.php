@@ -16,17 +16,17 @@ class FuncionarioSeeder extends Seeder
     public function run(): void
     {
         $user = User::create([
-            'email'=> 'funcionario@test.com',
-            'password'=>Hash::make('123456'),
-            'user_type'=>'funcionario'
+            'email' => 'funcionario@test.com',
+            'password' => Hash::make('123456'),
+            'user_type' => 'funcionario'
         ]);
 
-        $admin = Funcionario::create([
+        Funcionario::create([
+            'user_id' => $user->id,
             'nome'=> 'Funcionario',
-            'cpf'=> '12345678910',
-            'cargo'=>'estoque',
-            'user_id'=> $user->id
+            'cpf' => '12345678910',
+            'cargo' => 'vendedor',
+            
         ]);
-    
     }
 }

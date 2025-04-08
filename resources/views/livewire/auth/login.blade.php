@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center justify-content-center vh-100 bg-light">
-    <div class="card shadow-sm p-4" style="widht: 400px">
+    <div class="card shadow-sm p-4" style="width: 400px">
         @if (session()->has('error'))
             <div class="alert alert-danger">{{ session('error') }} </div>
         @endif
